@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import { BsPersonCircle } from "react-icons/bs";
+import styled from "styled-components";
 
 type TSize = "large" | "medium" | "small";
 

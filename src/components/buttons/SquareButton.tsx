@@ -52,19 +52,25 @@ export const SquareButtonStyle = styled.button<SquareButtonStyleProps>`
       theme.squareButtonSize[$buttonSize].fontSize};
   }
 
-  cursor: ${({ disabled }) => (disabled ? '' : 'pointer')};
+  cursor: ${({ disabled }) => (disabled ? "" : "pointer")};
 
   &:hover {
     color: ${({ theme, $buttonColor, disabled }) =>
-      disabled ? theme.buttonColor[$buttonColor].color :
-      theme.buttonColor[`${$buttonColor}Hover`]?.color || theme.buttonColor[$buttonColor].color};
+      disabled
+        ? theme.buttonColor[$buttonColor].color
+        : theme.buttonColor[`${$buttonColor}Hover`]?.color ||
+          theme.buttonColor[$buttonColor].color};
     background-color: ${({ theme, $buttonColor, disabled }) =>
-      disabled ? theme.buttonColor[$buttonColor].background :
-      theme.buttonColor[`${$buttonColor}Hover`]?.background || theme.buttonColor[$buttonColor].background};
+      disabled
+        ? theme.buttonColor[$buttonColor].background
+        : theme.buttonColor[`${$buttonColor}Hover`]?.background ||
+          theme.buttonColor[$buttonColor].background};
     border: 1px solid
       ${({ theme, $buttonColor, disabled }) =>
-        disabled ? theme.buttonColor[$buttonColor].stroke :
-        theme.buttonColor[`${$buttonColor}Hover`]?.stroke || theme.buttonColor[$buttonColor].stroke};
+        disabled
+          ? theme.buttonColor[$buttonColor].stroke
+          : theme.buttonColor[`${$buttonColor}Hover`]?.stroke ||
+            theme.buttonColor[$buttonColor].stroke};
   }
 `;
 
